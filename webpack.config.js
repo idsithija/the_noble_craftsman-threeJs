@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'public'), // Update to 'public'
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -23,7 +23,7 @@ module.exports = {
   },
   devServer: {
     static: {
-      directory: path.join(__dirname, 'src'), // Update the path to the source directory
+      directory: path.join(__dirname, 'src'),
     },
     open: true,
   },
